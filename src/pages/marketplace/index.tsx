@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { RevestureMarketplace } from "~/components/RevestureMarketplace";
+import { marketplaceContractAddress } from "~/utils/constants";
 
 export default function Marketplace() {
   return (
@@ -16,7 +17,7 @@ export default function Marketplace() {
             ReVesture <span className="text-[hsl(280,100%,70%)]">Marketplace</span>
           </h1>
           <div className="grid grid-cols-3 gap-4">
-            <RevestureMarketplace address="0x8b6988D56F0176F8Aa09F7d6D04c59aad8980A1D" />
+            <RevestureMarketplace address={marketplaceContractAddress} />
             </div>
         </div>
       </main>
