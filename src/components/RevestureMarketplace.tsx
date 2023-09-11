@@ -15,9 +15,9 @@ export const RevestureMarketplace = ({ address }: { address: string }) => {
       {marketplaceData && (
           <div className="grid grid-cols-3 gap-4">
           {marketplaceData.length > 0 ? marketplaceData?.map((listing) => (
-            <div key={listing.id} className="text-white flex flex-col items-center">
+            <div key={listing.id.toString()} className="text-white flex flex-col items-center">
               <h3>{listing.asset.name}</h3>
-              {listing.asset.image && listing.asset.name && <Image src={listing.asset.image} width={400} height={400} alt={listing.asset.name} />}
+              {listing.asset.image && listing.asset.name && <Image src={listing.asset.image.toString()} width={400} height={400} alt={listing.asset.name.toString()} />}
               <p>{listing.asset.description}</p>
             </div>
           )) : (
